@@ -1,7 +1,6 @@
 (function() {
   const imgUrl = "https://i.pinimg.com/736x/dd/0e/ae/dd0eae4117ac6547443d5e27cd571f7c.jpg";
 
-  // Backdrop overlay
   const backdrop = document.createElement("div");
   backdrop.style.position = "fixed";
   backdrop.style.top = "0";
@@ -21,7 +20,6 @@
     }, 300);
   };
 
-  // Popup container - memenuhi seluruh layar
   const popup = document.createElement("div");
   popup.style.position = "fixed";
   popup.style.top = "0";
@@ -35,14 +33,12 @@
   popup.style.opacity = "0";
   popup.style.transition = "opacity 0.3s ease";
 
-  // Image - memenuhi seluruh popup
   const img = document.createElement("img");
   img.src = imgUrl;
   img.style.width = "100%";
   img.style.height = "100%";
   img.style.objectFit = "contain";
 
-  // Close button - di pojok kanan atas
   const close = document.createElement("button");
   close.innerHTML = "&times;";
   close.style.position = "absolute";
@@ -86,7 +82,6 @@
   document.body.appendChild(backdrop);
   document.body.appendChild(popup);
 
-  // Trigger animation
   requestAnimationFrame(() => {
     setTimeout(() => {
       popup.style.opacity = "1";
